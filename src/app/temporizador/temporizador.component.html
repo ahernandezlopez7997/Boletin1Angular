@@ -1,0 +1,29 @@
+<!--4. Componente de Temporizador-->
+<!--Se solicita que se cree un temporizador que cuente hacia atrás desde un número definido.-->
+<!--El componente debe tener un campo de entrada para el tiempo en segundos y un botón-->
+<!--para iniciar la cuenta regresiva. También debe tener un botón para detenerla. Haz uso de-->
+<!--setInterval() y clearInterval() para manejar el temporizador.-->
+
+<div class="temporizador-container">
+  <h2>Ejercicio 4</h2>
+  <h2>Temporizador</h2>
+
+<!--Se crea un campo de entrada para el tiempo en segundos-->
+  <input type="number" [(ngModel)]="tiempoInicial" placeholder="Tiempo en segundos" />
+  <br>
+  <br>
+
+<!--Se crean los botones para iniciar y detener el temporizador-->
+  <button (click)="iniciarTemporizador()">Iniciar</button>
+  <button (click)="detenerTemporizador()">Detener</button>
+
+<!--Se muestra el tiempo restante en segundos-->
+  <div *ngIf="tiempoRestante > 0">
+    <p>Tiempo restante: {{ tiempoRestante }} segundos</p>
+  </div>
+
+<!--Se muestra un mensaje cuando el tiempo termina-->
+  <div *ngIf="tiempoRestante === 0 && intervaloId === null">
+    <p>¡Tiempo terminado!</p>
+  </div>
+</div>

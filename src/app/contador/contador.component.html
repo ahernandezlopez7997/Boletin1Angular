@@ -1,0 +1,14 @@
+<!--2. Componente de Contador-->
+<!--Queremos que se cree un componente que vaya mostrando la hora, minutos y segundos-->
+<!--actuales, y que se vaya actualizando cada segundo. Además, se quiere que haya un botón-->
+<!--que pueda detener el tiempo mostrado. Usa setInterval() para incrementar un número-->
+<!--cada segundo y mostrarlo en el HTML e investiga y utiliza ngOnDestroy para limpiar el-->
+<!--intervalo.-->
+
+
+<div class="contador-container">
+  <h2>Ejercicio 2</h2>
+  <h2>Contador</h2>
+  <h2>{{ horaActual | date: 'HH:mm:ss' }}</h2>
+  <button (click)="detenerContador()">Detener Contador</button>
+</div>

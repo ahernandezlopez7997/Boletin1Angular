@@ -1,0 +1,15 @@
+
+<!--1. Componente de Saludo-->
+<!--Se solicita crear un componente que muestre un saludo personalizado. El componente debe-->
+<!--aceptar un @Input() que represente el nombre de la persona a la que saluda. En el HTML,-->
+<!--muestra el saludo en el formato: "¡Hola, [nombre]!" o alguno similar-->
+
+<div class="saludo-container">
+  <h2>Ejercicio 1</h2>
+<!--  Este input es para solicitar el nombre del usuario y luego utilizarlo en el saludo -->
+  <input [(ngModel)]="nombre" placeholder="Introduce tu nombre" />
+  <h2>¡Bienvenido {{nombre}}!</h2>
+
+<!-- Este h2 saluda según la hora del dia -->
+  <h2>{{saludo}}</h2>
+</div>

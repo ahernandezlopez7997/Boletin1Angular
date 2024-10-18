@@ -1,0 +1,20 @@
+<!--3. Componente de Lista de Tareas-->
+<!--Hay que crear un componente para gestionar una lista de tareas simples. Ha de permitir-->
+<!--agregar tareas mediante un campo de entrada y un botón y mostrar la lista de tareas debajo-->
+<!--del campo de entrada. Utiliza un array para almacenar las tareas y usa *ngFor para-->
+<!--mostrarlas.-->
+
+<div class="lista-tareas-container">
+  <h2>Ejercicio 3</h2>
+  <h2>Lista de Tareas</h2>
+<!--Aquí va el campo de entrada y el botón-->
+  <input [(ngModel)]="nuevaTarea" placeholder="Introduce una nueva tarea" />
+  <br>
+  <br>
+  <button (click)="agregarTarea()">Agregar Tarea</button>
+<!--Aquí va la lista de tareas-->
+  <ul>
+<!--Aquí va el *ngFor que es un bucle que recorre el array listaTareas-->
+    <li *ngFor="let tarea of listaTareas">{{ tarea }}</li>
+  </ul>
+</div>
