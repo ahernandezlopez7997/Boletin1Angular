@@ -1,0 +1,21 @@
+<!--7. Componente de Calculadora Simple-->
+<!--Hay que crear una calculadora simple que realice sumas. Esta ha de solicitar dos números y-->
+<!--muestra la suma cuando se presiona un botón. Hay que utilizar bindings para manejar los-->
+<!--valores de entrada.-->
+<!--Una vez esté hecha la suma, introduce opciones de resta, multiplicación, división y raíz-->
+<!--cuadrada.-->
+
+<div class="calculadora-container">
+  <h2>Ejercicio 7</h2>
+  <h2>Calculadora Simple</h2>
+  <input type="number" [(ngModel)]="numero1" placeholder="Número 1" />
+  <input type="number" [(ngModel)]="numero2" placeholder="Número 2" />
+  <br><br>
+  <button (click)="sumar()">Sumar</button>
+  <button (click)="restar()">Restar</button>
+  <button (click)="multiplicar()">Multiplicar</button>
+  <button (click)="dividir()">Dividir</button>
+  <button (click)="raizCuadrada()">Raíz Cuadrada</button>
+  <br><br>
+  <p>Resultado: {{ resultado }}</p>
+</div>

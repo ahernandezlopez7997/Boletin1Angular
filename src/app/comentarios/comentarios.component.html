@@ -1,0 +1,14 @@
+<!--5. Componente de Comentarios-->
+<!--Crear un componente para mostrar comentarios. Permite que los usuarios ingresen un-->
+<!--comentario y lo envíen. Muestra una lista de comentarios enviados. Utiliza @Output() para-->
+<!--notificar a un componente padre cuando un nuevo comentario se envía.-->
+
+<div class="comentarios-container">
+  <h2>Ejercicio 5</h2>
+  <h2>Comentarios</h2>
+  <input type="text" [(ngModel)]="comentario" placeholder="Escribe un comentario"/>
+  <button (click)="enviarComentario()">Enviar</button>
+  <ul>
+    <li *ngFor="let comentario of comentarios">{{ comentario }}</li>
+  </ul>
+</div>
